@@ -1,0 +1,1 @@
+mysql -u imsks -pk7cic9md4tk4s8ho -h db-mysql-blr1-31132-do-user-7687032-0.b.db.ondigitalocean.com -P 25060 -D fast_fingers_prod
