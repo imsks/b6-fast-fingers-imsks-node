@@ -1,6 +1,4 @@
-# Project Title
-
-Fast Fingers NodeJS APIs
+# Fast Fingers NodeJS APIs
 
 ## Requirements
 
