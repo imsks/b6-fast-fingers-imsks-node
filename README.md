@@ -1,88 +1,54 @@
-# Fast Fingers @ https://imsks-fast-fingers.netlify.app/
+# Project Title
 
-Pesto Tech is proudly launching its own speed typing game named **Fast fingers**. You have been awarded with the project and you need to design and develop this project which should
-meet the requirements mentioned in the MVP below.
+A nice project with a nice description
 
-## MVP Requirement
+---
+## Requirements
 
-1. Ask player to enter his/her name before starting the game.
+For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
 
-   - Do not ask player to enter his/her name again if he plays the game again in the same session.
-   - Show proper error message if player doesn't enter his/her name and clicks on `START GAME`.
+### Node
+- #### Node installation on Windows
 
-2. Set Default difficulty level to `EASY`. User should be able to change the difficulty level using dropdown.
-3. Start the game on `START GAME` button click.
+  Just go on [official Node.js website](https://nodejs.org/) and download the installer.
+Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
 
-4. Show random word from dictionary and an input box on game screen.
+- #### Node installation on Ubuntu
 
-- For `EASY` difficulty level, word length should be less than or equal to 4.
-- For `MEDIUM` difficulty level, word length should be between 5-8(noth numbers included).
-- For `HARD` difficulty level, word length should be greater than 8.
+  You can install nodejs and npm easily with apt install, just run the following commands.
 
-5. As soon as the typed word matches the word shown on screen, it should we considered submitted (pressing "ENTER" button shall not be required to submit a word). Empty the input box after a successful attempt.
+      $ sudo apt install nodejs
+      $ sudo apt install npm
 
-6. A timer shall be shown on the screen for every word and the maximum time that an user is allowed to type a word will depend on the difficulty factor. Refer to the formula provided below to calculate the maximum time allowed :
+- #### Other Operating Systems
+  You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
 
-Timer value = (Number of letters in the word) / (Difficulty factor)
+If the installation was successful, you should be able to run the following command.
 
-Round the timer value to nearest integer bigger than the value.
+    $ node --version
+    v8.11.3
 
-Initially the difficulty factor would be 1 and it will keep increasing as the player progresses in the game and the timer value is guaranteed to be greater than or equal to 2 seconds that means a player must get at least 2 seconds to type a word. So whenever the calculated value is found to be less than 2 seconds, it should be rounded off to 2 seconds always.
+    $ npm --version
+    6.1.0
 
-7. There are three levels in game: EASY, MEDIUM and HARD
+If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
 
-Difficulty factor for easy level: 1
+    $ npm install npm -g
 
-Difficulty factor for medium level: 1.5
+###
+### Yarn installation
+  After installing node, this project will need yarn too, so just run the following command.
 
-Difficulty factor for hard level: 2
+      $ npm install -g yarn
 
-8. Increase difficulty factor by 0.01 after every successful word attempt.
+---
 
-9. Change the game level if difficulty factor crosses particular levels difficulty factor.
+## Install
 
-10. Player should be able to stop the game by clicking on `STOP GAME` button
-11. **Game score for the player is the total time player was able to remain in the game before game gets over either because his/her time runs out for a particular word or player Stops the game**.
-12. Show previous games score for player in a sidebar
+    $ git clone https://github.com/imsks/b6-fast-fingers-imsks-node
+    $ cd b6-fast-fingers-imsks-node
+    $ yarn install
 
-13. Show best score for player
-14. Application UI should closely match with the provided UI design mocks.
+## Running the project
 
-**Note: Please deploy your application to Netlify(no other platforms allowed at this point) and Add your Application link to website section in About field**
-![](public/about.png)
-
-## Additional Requirement
-
-- Write Test cases for your components.
-
-## Tips
-
-- Deploy your application in very early stage and then do continous development.
-- Test your application in Google Chrome, Mozilla firefox and Internet explorer 11.
-
-## UI Design mocks
-
-UI design mocks are available in `design-mocks` folder
-
-|                         |                         |
-| :---------------------: | :---------------------: |
-| ![](design-mocks/1.png) | ![](design-mocks/2.png) |
-| ![](design-mocks/3.png) | ![](design-mocks/4.png) |
-| ![](design-mocks/5.png) | ![](design-mocks/6.png) |
-
-[Adobe XD design link](https://drive.google.com/file/d/1qYhb8cNdXoBnD9rxoDcWF4DmTEpQX35n/view?usp=sharing)
-
-[Zeplin web link](https://zpl.io/a710mxj)
-
-Zeplin App Link: zpl://project?pid=5f75f13621f33094313f2b94
-
-## Allowed Tech stack
-
-- HTML, CSS, JavaScript
-- Bootstrap
-- ReactJS
-- SCSS
-- DOM Testing Library
-- Jest and React Testing Library
-
-**NOTE: React Component libraries like Material UI, Antd, Chakra UI are not allowed**
+    $ npm start
